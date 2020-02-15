@@ -1,0 +1,24 @@
+{
+  "name": "server-game-jam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolomonYu/Server-game-jam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SolomonYu/Server-game-jam/issues"
+  },
+  "homepage": "https://github.com/SolomonYu/Server-game-jam#readme"
+}
