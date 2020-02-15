@@ -3,11 +3,10 @@ var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 
-var portnum = 8080;
+var portnum = process.env.PORT || 8080;
 var currentUsers = 0;
 
 app.use(express.static('public'));
-
 // app.get('/', function(req, res){
 //     res.sendFile(__dirname + '/public/index.html');
 // });
