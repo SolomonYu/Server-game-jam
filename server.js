@@ -5,6 +5,7 @@ var io = require('socket.io')(http);
 
 var portnum = process.env.PORT || 8080;
 var currentUsers = 0;
+var votes = [0,0,0,0]
 
 app.use(express.static('public'));
 // app.get('/', function(req, res){
@@ -18,6 +19,14 @@ io.on('connection', function(socket){
         console.log("user disconnected");
         currentUsers--;
     });
+    socket.on('requestVote', function(vote){
+        socket.emit('getVote', vote);
+        console.log("sending votes...");
+        votes = [0,0,0,0];
+    });
+    socket.on('submitVote', function(voteNumber){
+        votes[voteNumber] += 1;
+    })
 });
 
 http.listen(portnum, function(){

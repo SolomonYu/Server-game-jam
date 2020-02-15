@@ -19,3 +19,7 @@ body{
 .button:hover{
     background-color: darkgray;
 }
+
+.button.active{
+    background-color: greenyellow;
+}
