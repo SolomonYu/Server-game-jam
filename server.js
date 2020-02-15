@@ -20,14 +20,18 @@ io.on('connection', function(socket){
         currentUsers--;
     });
     socket.on('requestVote', function(vote){
-        socket.emit('getVote', vote);
+        io.emit('getVote', vote);
         console.log("sending votes...");
         console.log(vote);
         votes = [0,0,0,0];
         //set timer
-        setTimeout(sendResults(), 16000);
+        setTimeout(function(){
+            console.log("sending results");
+            io.emit('sendResults', votes);
+        }, 16000);
     });
     socket.on('submitVote', function(voteNumber){
+        console.log("vote received");
         votes[voteNumber] += 1;
     })
 });
@@ -36,8 +40,4 @@ http.listen(portnum, function(){
     console.log('app is listening on port: ' + portnum);
 });
 
-function sendResults(){
-    socket.emit('sendResults', votes);
-    votes = [0,0,0,0];
-}
 

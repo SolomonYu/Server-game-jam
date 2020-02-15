@@ -1,17 +1,18 @@
 var socket = io();
 var currentVote = 0;
 
-
-socket.on('getVote', function(vote){
-    console.log("got vote");
-    document.getElementById("status").innerHTML =  "Vote now!";
-    document.getElementById("button1").innerHTML =  vote.op1;
-    document.getElementById("button2").innerHTML =  vote.op2;
-    document.getElementById("button3").innerHTML =  vote.op3;
-    document.getElementById("button4").innerHTML =  vote.op4;
-    resetButtons();
-    setTimeout(submitVote, 15000);
-});
+window.onload = function(){
+    socket.on('getVote', function(vote){
+        console.log("got vote");
+        document.getElementById("status").innerHTML =  "Vote now!";
+        document.getElementById("button1").innerHTML =  vote.op1;
+        document.getElementById("button2").innerHTML =  vote.op2;
+        document.getElementById("button3").innerHTML =  vote.op3;
+        document.getElementById("button4").innerHTML =  vote.op4;
+        resetButtons();
+        setTimeout(submitVote, 15000);
+    });
+}
 
 function button1(){
     currentVote = 0;
