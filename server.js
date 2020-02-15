@@ -22,7 +22,10 @@ io.on('connection', function(socket){
     socket.on('requestVote', function(vote){
         socket.emit('getVote', vote);
         console.log("sending votes...");
+        console.log(vote);
         votes = [0,0,0,0];
+        //set timer
+        setTimeout(sendResults(), 16000);
     });
     socket.on('submitVote', function(voteNumber){
         votes[voteNumber] += 1;
@@ -32,4 +35,9 @@ io.on('connection', function(socket){
 http.listen(portnum, function(){
     console.log('app is listening on port: ' + portnum);
 });
+
+function sendResults(){
+    socket.emit('sendResults', votes);
+    votes = [0,0,0,0];
+}
 

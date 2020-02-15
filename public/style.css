@@ -6,11 +6,11 @@ body{
     cursor: pointer;
     background-color: grey;
     border: 2px solid black;
-    padding: 16px 32px;
+    padding: 10% 20%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 200%;
     margin: 16px;
     color: whitesmoke;
     border-radius: 10px;
