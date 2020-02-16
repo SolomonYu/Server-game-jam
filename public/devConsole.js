@@ -12,6 +12,11 @@ function sendRequestVote(){
     socket.emit("requestVote", vote)
 }
 
+function sendResult(){
+    console.log("sending test result...")
+    socket.emit("submitVote",1)
+}
+
 // socket.on('displayVotes', function(vote) {
 //     console.log(vote.op1)
 // })

@@ -12,6 +12,10 @@ window.onload = function(){
         resetButtons();
         setTimeout(submitVote, 15000);
     });
+    socket.on('sendResults', function(votes){
+        console.log(votes)
+        console.log("got results");
+    })
 }
 
 function button1(){
