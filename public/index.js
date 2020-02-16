@@ -1,5 +1,5 @@
 var socket = io();
-var currentVote = 0;
+var currentVote = -1;
 
 window.onload = function(){
     socket.on('getVote', function(vote){
@@ -46,7 +46,7 @@ function resetButtons(){
 }
 
 function submitVote(){
-    if (currentVote != 0){
+    if (currentVote != -1){
         socket.emit('submitVote', currentVote);
         document.getElementById("status").innerHTML =  "Sent vote.";
     }
