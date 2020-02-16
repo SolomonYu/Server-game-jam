@@ -1,10 +1,10 @@
 var socket = io();
 
 var vote = {
-    "op1" : "one",
-    "op2" : "two",
-    "op3" : "three",
-    "op4" : "four"
+    "op1" : "Spider",
+    "op2" : "Harpy",
+    "op3" : "Lamia",
+    "op4" : "Slime"
 }
 
 function sendRequestVote(){
