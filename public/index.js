@@ -16,6 +16,20 @@ window.onload = function(){
     socket.on('sendResults', function(votes){
         console.log(votes)
         console.log("got results");
+        var total = parseInt(votes.ob1) + parseInt(votes.ob2) + parseInt(votes.ob3) + parseInt(votes.ob4);
+
+        var currentPercent = Math.floor(76 - ((parseInt(votes.ob1)/total)*54));
+        document.getElementById("graph1").style.marginRight = currentPercent + "%"
+        document.getElementById("graph1").innerHTML = votes.ob1;
+        var currentPercent = Math.floor(76 - ((parseInt(votes.ob2)/total)*54));
+        document.getElementById("graph2").style.marginRight = currentPercent + "%"
+        document.getElementById("graph2").innerHTML = votes.ob2;
+        var currentPercent = Math.floor(76 - ((parseInt(votes.ob3)/total)*54));
+        document.getElementById("graph3").style.marginRight = currentPercent + "%"
+        document.getElementById("graph3").innerHTML = votes.ob3;
+        var currentPercent = Math.floor(76 - ((parseInt(votes.ob4)/total)*54));
+        document.getElementById("graph4").style.marginRight = currentPercent + "%"
+        document.getElementById("graph4").innerHTML = votes.ob4;
     })
 }
 
