@@ -72,7 +72,7 @@ function submitVote(){
     else{
         document.getElementById("status").innerHTML =  "Vote timed out.";
     }
-    currentVote = 0;
+    currentVote = -1;
 
     resetButtons()
     var strReset = "Awaiting choices..."
