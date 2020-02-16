@@ -50,7 +50,10 @@ function submitVote(){
         socket.emit('submitVote', currentVote);
         document.getElementById("status").innerHTML =  "Sent vote.";
     }
+    else{
+        document.getElementById("status").innerHTML =  "Vote timed out.";
+    }
     currentVote = 0;
-    document.getElementById("status").innerHTML =  "Vote timed out.";
+    
     
 }
