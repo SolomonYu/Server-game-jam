@@ -54,6 +54,11 @@ function submitVote(){
         document.getElementById("status").innerHTML =  "Vote timed out.";
     }
     currentVote = 0;
-    
-    
+
+    resetButtons()
+    var strReset = "Awaiting choices..."
+    document.getElementById("button1").innerHTML =  strReset;
+    document.getElementById("button2").innerHTML =  strReset;
+    document.getElementById("button3").innerHTML =  strReset;
+    document.getElementById("button4").innerHTML =  strReset;
 }
