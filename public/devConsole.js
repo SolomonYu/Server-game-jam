@@ -7,8 +7,6 @@ var vote = {
     "op4" : "four"
 }
 
-votes = [0,0,0,0]
-
 function sendRequestVote(){
     console.log("Sending vote request to server...")
     socket.emit("requestVote", vote)
@@ -20,9 +18,10 @@ function sendRequestVote(){
 
 socket.on('sendResults', function(votes) {
     console.log("Received vote totals")
-    console.log(`Option 1: ${votes.op1} votes`)
-    console.log(`Option 2: ${votes.op2} votes`)
-    console.log(`Option 3: ${votes.op3} votes`)
-    console.log(`Option 4: ${votes.op4} votes`)
+    console.log(votes)
+    console.log(`Option 1: ${votes[0]} votes`)
+    console.log(`Option 2: ${votes[1]} votes`)
+    console.log(`Option 3: ${votes[2]} votes`)
+    console.log(`Option 4: ${votes[3]} votes`)
 })
 
