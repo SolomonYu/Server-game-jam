@@ -11,10 +11,9 @@ body{
     display: block;
     justify-content: center;
     font-size: 150%;
-    margin: 15px 22%;
+    margin: 10px 22%;
     color: whitesmoke;
     border-radius: 10px;
-    animation-duration: 0.5s;
 }
 
 .devButton{
@@ -47,35 +46,66 @@ div#resTitle{
 
 .button.one {
     background-color: cornflowerblue;
-    border: 2px solid black;    
+    border: 2px solid cornflowerblue;   
+    color: whitesmoke;
 }
 .button.one:hover {
-    background-color: lightsteelblue;   
+    background-color: whitesmoke; 
+    color: cornflowerblue;
+    transition-duration: 0.5s;  
 }
-.button.two{
-    background-color: firebrick;
-    border: 2px solid black;
-}
-.button.two:hover {
-    background-color: crimson;   
-}
-.button.three {
-    background-color: mediumpurple;
-    border: 2px solid black;
-}
-.button.three:hover {
-    background-color: plum;   
-}
-.button.four{
-    background-color: gold;
-    border: 2px solid black;
-}
-.button.four:hover {
-    background-color: yellow;   
+.button.one.active{
+    background-color: rgba(100, 148, 237, 0.5);
+    color: whitesmoke;
+    transition-duration: 0.5s;  
 }
 
-.button.active{
-    border: 5px solid green;
+.button.two {
+    background-color: firebrick;
+    border: 2px solid firebrick;   
+    color: whitesmoke;
+}
+.button.two:hover {
+    background-color: whitesmoke; 
+    color: firebrick;
+    transition-duration: 0.5s;  
+}
+.button.two.active{
+    background-color: rgba(178, 34, 34, 0.5);
+    color: whitesmoke;
+    transition-duration: 0.5s;  
+}
+
+.button.three {
+    background-color: green;
+    border: 2px solid green;   
+    color: whitesmoke;
+}
+.button.three:hover {
+    background-color: whitesmoke; 
+    color: green;
+    transition-duration: 0.5s;  
+}
+.button.three.active{
+    background-color: rgba(0, 128, 0, 0.5);
+    color: whitesmoke;
+    transition-duration: 0.5s;  
+}
+
+.button.four {
+    background-color: orange;
+    border: 2px solid orange;   
+    color: whitesmoke;
+}
+.button.four:hover {
+    background-color: whitesmoke; 
+    color: orange;
+    transition-duration: 0.5s;  
+}
+.button.four.active{
+    background-color: rgba(255, 166, 0, 0.5);
+    color: whitesmoke;
+    transition-duration: 0.5s;  
 }
 
 .graph{
@@ -93,10 +123,10 @@ div#resTitle{
     background-color: firebrick;
 }
 #graph3{
-    background-color: mediumpurple;
+    background-color: green;
 }
 #graph4{
-    background-color: gold;
+    background-color: orange;
 }
 
 /* mobile devices only */
@@ -104,7 +134,7 @@ div#resTitle{
 
     .button {
         padding: 8% 10%;
-        margin: 4% 12%;
+        margin: 2% 12%;
         font-size: 300%;
     }
 
