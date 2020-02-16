@@ -4,7 +4,7 @@ body{
 
 .button{
     cursor: pointer;
-    border: 2px solid black;
+    border: 5px solid black;
     padding: 30px 50px;
     text-align: center;
     text-decoration: none;
@@ -75,7 +75,7 @@ div#resTitle{
 }
 
 .button.active{
-    border: 8px solid green;
+    border: 5px solid green;
 }
 
 .graph{
