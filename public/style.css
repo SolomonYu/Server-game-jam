@@ -23,3 +23,21 @@ body{
 .button.active{
     background-color: greenyellow;
 }
+
+.devButton{
+    cursor: pointer;
+    background-color: grey;
+    border: 5px solid black;
+    padding: 30px 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 200%;
+    margin: 16px;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.devButton:hover{
+    background-color: rgb(133, 178, 236);
+}
