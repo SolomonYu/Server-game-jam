@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>devConsole</title>
         <script src="/socket.io/socket.io.js"></script>
         <script src="devConsole.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <body>
+        
+
+        <div id="results">
+            <h1>Latest Voting Results</h1>
+            <br> Option 1: <span id= "option1">N/A</span> votes
+            <br> Option 2: <span id= "option2">N/A</span> votes
+            <br> Option 3: <span id= "option3">N/A</span> votes
+            <br> Option 4: <span id= "option4">N/A</span> votes
+        </div>
+
+        <br>
+        <br>
+
         <div class="devButton" id="buttonRequestVote" onclick="sendRequestVote()">
             Send event <b>requestVote</b>
         </div>
 
         <div class="devButton" onclick="sendResult()">
-            Send test result
-        </div>
-
-        <div id="results">
-            <h1>Latest Results</h1>
-            <br> Option 1: <span id= "option1">N/A</span> votes
-            <br> Option 2: <span id= "option2">N/A</span> votes
-            <br> Option 3: <span id= "option3">N/A</span> votes
-            <br> Option 4: <span id= "option4">N/A</span> votes
+            Send event <b>sendResult</b>
         </div>
 
     </body>

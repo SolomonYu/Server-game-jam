@@ -4,6 +4,7 @@ var currentVote = -1;
 window.onload = function(){
     socket.on('getVote', function(vote){
         console.log("got vote");
+        console.log(vote);
         document.getElementById("status").innerHTML =  "Vote now!";
         document.getElementById("button1").innerHTML =  vote.op1;
         document.getElementById("button2").innerHTML =  vote.op2;

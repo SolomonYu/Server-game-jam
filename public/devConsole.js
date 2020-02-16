@@ -24,15 +24,15 @@ function sendResult(){
 socket.on('sendResults', function(votes) {
     console.log("Received vote totals")
     console.log(votes)
-    console.log(`Option 1: ${votes[0]} votes`)
-    console.log(`Option 2: ${votes[1]} votes`)
-    console.log(`Option 3: ${votes[2]} votes`)
-    console.log(`Option 4: ${votes[3]} votes`)
+    console.log(`Option 1: ${votes.ob1} votes`)
+    console.log(`Option 2: ${votes.ob2} votes`)
+    console.log(`Option 3: ${votes.ob3} votes`)
+    console.log(`Option 4: ${votes.ob4} votes`)
 
     //update UI with new totals
-    document.getElementById("option1").textContent=toString(votes[0]);
-    document.getElementById("option2").textContent=toString(votes[1]);
-    document.getElementById("option3").textContent=toString(votes[2]);
-    document.getElementById("option4").textContent=toString(votes[3]);
+    document.getElementById("option1").innerHTML= votes.ob1;
+    document.getElementById("option2").innerHTML= votes.ob2;
+    document.getElementById("option3").innerHTML= votes.ob3;
+    document.getElementById("option4").innerHTML= votes.ob4;
 })
 

@@ -18,19 +18,28 @@ io.on('connection', function(socket){
         console.log("sending votes...");
         console.log(vote);
         votes = [0,0,0,0];
+        setTimeout(function(){
+            var voteObject = {
+                "ob1": votes[0],
+                "ob2": votes[1],
+                "ob3": votes[2],
+                "ob4": votes[3]
+            }
+            io.emit('sendResults', voteObject);
+        }, 16000)
         
     });
     socket.on('submitVote', function(voteNumber){
         console.log("vote received");
         votes[voteNumber] += 1;
         console.log(votes);
-        var voteObject = {
-            "ob1": votes[0],
-            "ob2": votes[1],
-            "ob3": votes[2],
-            "ob4": votes[3]
-        }
-        io.emit('sendResults', voteObject);        
+        // var voteObject = {
+        //     "ob1": votes[0],
+        //     "ob2": votes[1],
+        //     "ob3": votes[2],
+        //     "ob4": votes[3]
+        // }
+        // io.emit('sendResults', voteObject);        
     })
 });
 
