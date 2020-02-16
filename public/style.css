@@ -44,6 +44,12 @@ body{
     background-color: rgb(133, 178, 236);
 }
 
+div#status {
+    text-align: center;
+    font-size: 230%;
+    padding: 8%;
+}
+
 /* mobile devices only */
 @media only screen and (max-device-width: 600px) {
 
@@ -51,6 +57,10 @@ body{
         padding: 8% 10%;
         margin: 4% 12%;
         font-size: 300%;
+    }
+
+    div#status {
+        font-size: 350%
     }
 
 }
