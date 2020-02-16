@@ -11,7 +11,7 @@ votes = [0,0,0,0]
 
 function sendRequestVote(){
     console.log("Sending vote request to server...")
-    io.emit("requestVote", vote)
+    socket.emit("requestVote", vote)
 }
 
 // socket.on('displayVotes', function(vote) {
