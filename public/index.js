@@ -22,32 +22,32 @@ window.onload = function(){
 function button1(){
     currentVote = 0;
     resetButtons();
-    document.getElementById("button1").className = 'button active';
+    document.getElementById("button1").classList.add('active');;
 }
 
 function button2(){
     currentVote = 1;
     resetButtons();
-    document.getElementById("button2").className = 'button active';
+    document.getElementById("button2").classList.add('active');;
 }
 
 function button3(){
     currentVote = 2;
     resetButtons();
-    document.getElementById("button3").className = 'button active';
+    document.getElementById("button3").classList.add('active');;
 }
 
 function button4(){
     currentVote = 3;
     resetButtons();
-    document.getElementById("button4").className = 'button active';
+    document.getElementById("button4").classList.add('active');
 }
 
 function resetButtons(){
-    document.getElementById("button1").className = 'button';
-    document.getElementById("button2").className = 'button';
-    document.getElementById("button3").className = 'button';
-    document.getElementById("button4").className = 'button';
+    document.getElementById("button1").classList.remove('active');
+    document.getElementById("button2").classList.remove('active');
+    document.getElementById("button3").classList.remove('active');
+    document.getElementById("button4").classList.remove('active');
 }
 
 function submitVote(){

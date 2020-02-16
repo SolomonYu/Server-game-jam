@@ -4,7 +4,6 @@ body{
 
 .button{
     cursor: pointer;
-    background-color: grey;
     border: 2px solid black;
     padding: 30px 50px;
     text-align: center;
@@ -16,14 +15,6 @@ body{
     color: whitesmoke;
     border-radius: 10px;
     animation-duration: 0.5s;
-}
-
-.button:hover{
-    background-color: darkgray;
-}
-
-.button.active{
-    background-color: rgb(114, 190, 71);
 }
 
 .devButton{
@@ -48,6 +39,40 @@ div#status {
     text-align: center;
     font-size: 230%;
     padding: 8%;
+}
+
+.button.one {
+    background-color: cornflowerblue;
+    border: 2px solid black;    
+}
+.button.one:hover {
+    background-color: lightsteelblue;   
+}
+.button.two{
+    background-color: firebrick;
+    border: 2px solid black;
+}
+.button.two:hover {
+    background-color: crimson;   
+}
+.button.three {
+    background-color: mediumpurple;
+    border: 2px solid black;
+}
+.button.three:hover {
+    background-color: plum;   
+}
+.button.four{
+    background-color: gold;
+    border: 2px solid black;
+}
+.button.four:hover {
+    background-color: yellow;   
+}
+
+
+.button.active{
+    border: 8px solid green;
 }
 
 /* mobile devices only */
