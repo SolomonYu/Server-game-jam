@@ -24,15 +24,13 @@ io.on('connection', function(socket){
         console.log("sending votes...");
         console.log(vote);
         votes = [0,0,0,0];
-        //set timer
-        setTimeout(function(){
-            console.log("sending results");
-            io.emit('sendResults', votes);
-        }, 16000);
+        
     });
     socket.on('submitVote', function(voteNumber){
         console.log("vote received");
         votes[voteNumber] += 1;
+        console.log(votes);
+        socket.broadcast.emit('sendResults', votes);
     })
 });
 
